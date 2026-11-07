@@ -6,23 +6,6 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
-### Added
-- Web reader of the paper on GitHub Pages, <https://thanatchon36.github.io/isan-rice-yield-benchmark/paper/>:
-  pandoc renders `paper/main.tex` with `paper/reader.html`, takes section, table, figure and equation numbers from
-  the LaTeX build (`paper/main.aux`) and shows a results strip whose numbers come from `paper/tables/macros.tex`.
-- Dataset on Hugging Face, [`thanatchon36/isan-rice-yield-benchmark`](https://huggingface.co/datasets/thanatchon36/isan-rice-yield-benchmark):
-  the simulated main world with its true yield components and the experiment results (CC BY 4.0), staged and uploaded
-  by `scripts/hf_dataset.py` (`make dataset`).
-- README banner (`docs/assets/banner.png`, `make banner`) drawn from the simulated districts.
-
-### Changed
-- Code moved into the `isanrice` package (`src/isanrice/`) with `pyproject.toml`, a command line
-  (`python -m isanrice.cli`) and a `Makefile` (`make setup`, `make all`, `make test`, ...); helper scripts moved to
-  `scripts/`. `requirements.txt` and `run_all.py` are replaced by `pyproject.toml` and `make all`.
-- The paper is built with tectonic (`make paper`); `make arxiv` writes `paper/arxiv.tar.gz` and checks that the
-  bundle compiles on its own (was `make_arxiv.py` -> `arxiv_source.zip`).
-- CI runs `make setup` and `make test` with uv (`.github/workflows/ci.yml`).
-
 ## [0.1.0] - 2026-11-07
 
 ### Added
@@ -37,3 +20,14 @@ All notable changes to this project are documented here. The format follows
   forecasting, conformal intervals and robustness over 10 worlds and 4 scenarios; post-hoc Ridge diagnostics.
 - The preprint (`paper/paper.pdf`), with every number, table and figure generated from `results/`.
 - Google Earth Engine template for real MODIS, CHIRPS, ERA5-Land and SRTM inputs, and the real-data schema.
+- Web reader of the paper on GitHub Pages, <https://thanatchon36.github.io/isan-rice-yield-benchmark/paper/>:
+  pandoc renders `paper/main.tex` with `paper/reader.html`, takes section, table, figure and equation numbers from
+  the LaTeX build (`paper/main.aux`) and shows a results strip whose numbers come from `paper/tables/macros.tex`.
+- Dataset on Hugging Face, [`thanatchon36/isan-rice-yield-benchmark`](https://huggingface.co/datasets/thanatchon36/isan-rice-yield-benchmark):
+  the simulated main world with its true yield components and the experiment results (CC BY 4.0), staged and uploaded
+  by `scripts/hf_dataset.py` (`make dataset`).
+- README banner (`docs/assets/banner.png`, `make banner`) drawn from the simulated districts.
+- Package layout: `src/isanrice/` with `pyproject.toml`, a command line (`python -m isanrice.cli`) and a `Makefile`
+  (`make setup`, `make all`, `make test`, ...); helper scripts in `scripts/`; CI with uv (`make setup`, `make test`).
+- Paper build with tectonic (`make paper`) and the arXiv source bundle `paper/arxiv.tar.gz` (`make arxiv`), checked
+  to compile on its own.
