@@ -9,6 +9,8 @@ All notable changes to this project are documented here. The format follows
 ### Added
 - Zenodo archive of every release (concept DOI [10.5281/zenodo.24036674](https://doi.org/10.5281/zenodo.24036674)), cited in the README, `CITATION.cff`,
   the paper, the web reader and the Hugging Face dataset card.
+- LinkedIn launch poster, `docs/assets/linkedin_poster.png` (1440 x 1800), built from `paper/tables/macros.tex` by
+  `scripts/make_linkedin_poster.py` (`make poster`).
 
 ## [0.1.0] - 2026-11-07
 

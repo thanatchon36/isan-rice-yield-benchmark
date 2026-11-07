@@ -1,6 +1,6 @@
 PY ?= .venv/bin/python
 
-.PHONY: setup simulate experiments quick diagnostics figures map banner paper web arxiv dataset test all clean
+.PHONY: setup simulate experiments quick diagnostics figures map banner poster paper web arxiv dataset test all clean
 
 setup:          ## create venv and install the package (needs uv)
 	uv venv .venv --python 3.12
@@ -26,6 +26,9 @@ map:            ## study-area map of the paper (downloads Natural Earth into dat
 
 banner:         ## README banner -> docs/assets/banner.png
 	$(PY) scripts/make_banner.py
+
+poster:         ## LinkedIn poster (1440 x 1800) -> docs/assets/linkedin_poster.png (downloads Fira Sans once)
+	$(PY) scripts/make_linkedin_poster.py
 
 paper:          ## paper/paper.pdf (tectonic) and the web reader docs/paper/ (pandoc)
 	$(PY) -m isanrice.cli paper

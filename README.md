@@ -52,6 +52,7 @@ Outputs: `results/` (metrics, predictions, ablations, SHAP recovery, conformal c
 | `arxiv` | arXiv source bundle → `paper/arxiv.tar.gz` (prints title, abstract and comments for the form) |
 | `dataset` | Stage the Hugging Face dataset → `build/hf_dataset/` (`UPLOAD=1` also uploads it) |
 | `banner` | README banner → `docs/assets/banner.png` |
+| `poster` | LinkedIn poster → `docs/assets/linkedin_poster.png` |
 
 ## What the pipeline does
 
@@ -119,6 +120,7 @@ scripts/gee_extract.py      Google Earth Engine template for real MODIS / CHIRPS
 scripts/arxiv_bundle.py     arXiv source bundle
 scripts/hf_dataset.py       Hugging Face dataset card + upload
 scripts/make_banner.py      README banner
+scripts/make_linkedin_poster.py  LinkedIn poster
 data/raw/                   synthetic inputs (same schema as real data)
 results/                    experiment outputs (CSV/JSON)
 paper/                      main.tex, sections/, tables/, figures/, reader.html, paper.pdf
