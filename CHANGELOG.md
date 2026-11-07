@@ -6,6 +6,10 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+- Zenodo archive of every release (concept DOI [10.5281/zenodo.24036674](https://doi.org/10.5281/zenodo.24036674)), cited in the README, `CITATION.cff`,
+  the paper, the web reader and the Hugging Face dataset card.
+
 ## [0.1.0] - 2026-11-07
 
 ### Added

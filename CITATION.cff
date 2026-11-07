@@ -14,6 +14,7 @@ authors:
     given-names: Thanatchon
 version: 0.1.0
 date-released: 2026-11-07
+doi: 10.5281/zenodo.24036674
 license: MIT
 repository-code: "https://github.com/thanatchon36/isan-rice-yield-benchmark"
 url: "https://thanatchon36.github.io/isan-rice-yield-benchmark/paper/"
@@ -25,5 +26,6 @@ preferred-citation:
     - family-names: Chongmankhong
       given-names: Thanatchon
   year: 2026
+  doi: 10.5281/zenodo.24036674
   url: "https://thanatchon36.github.io/isan-rice-yield-benchmark/paper/"
   notes: "Preprint; all results are from a synthetic benchmark."

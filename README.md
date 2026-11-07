@@ -7,6 +7,7 @@
 <a href="paper/paper.pdf"><img src="https://img.shields.io/badge/paper-PDF-f5a623?style=flat-square&labelColor=0b1020" alt="Paper PDF"></a>
 <a href="docs/DATA_SCHEMA.md"><img src="https://img.shields.io/badge/data-synthetic-b0560f?style=flat-square&labelColor=0b1020" alt="Data: synthetic"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffe8a3?style=flat-square&labelColor=0b1020" alt="License MIT"></a>
+<a href="https://zenodo.org/badge/latestdoi/1449352537"><img src="https://zenodo.org/badge/1449352537.svg" alt="DOI"></a>
 <a href="https://huggingface.co/datasets/thanatchon36/isan-rice-yield-benchmark"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20dataset-isan--rice--yield--benchmark-f5a623?style=flat-square&labelColor=0b1020" alt="Hugging Face dataset"></a>
 </p>
 
@@ -141,5 +142,5 @@ review. See the paper's discussion.
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff). License: MIT (code); the synthetic dataset on Hugging Face is CC BY 4.0.
+See [`CITATION.cff`](CITATION.cff); each release is archived on Zenodo (concept DOI [10.5281/zenodo.24036674](https://doi.org/10.5281/zenodo.24036674), badge above). License: MIT (code); the synthetic dataset on Hugging Face is CC BY 4.0.
 Developed with the assistance of Claude (Anthropic).

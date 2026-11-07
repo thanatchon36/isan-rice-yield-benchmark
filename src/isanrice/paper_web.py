@@ -20,6 +20,7 @@ from . import config as C
 REPO_URL = "https://github.com/thanatchon36/isan-rice-yield-benchmark"
 PAPER_URL = "https://thanatchon36.github.io/isan-rice-yield-benchmark/paper/"
 DATA_URL = "https://huggingface.co/datasets/thanatchon36/isan-rice-yield-benchmark"
+CONCEPT_DOI = "10.5281/zenodo.24036674"
 PAPER = C.ROOT / "paper"
 OUT = C.ROOT / "docs" / "paper"
 
@@ -178,12 +179,14 @@ def build_web(paper_dir: Path = PAPER, out_dir: Path = OUT) -> Path:
         '<li><a href="paper.pdf">Download PDF</a></li>'
         f'<li><a href="{REPO_URL}">Code and replication</a></li>'
         f'<li><a href="{DATA_URL}">Data (Hugging Face)</a></li>'
+        f'<li><a href="https://doi.org/{CONCEPT_DOI}">Zenodo archive</a></li>'
     )
     bib = (
         "@misc{chongmankhong2026isanrice,\n"
         "  author = {Chongmankhong, Thanatchon},\n"
         f"  title  = {{{title}: {subtitle[:1].lower() + subtitle[1:]}}},\n"
         "  year   = {2026},\n"
+        f"  doi    = {{{CONCEPT_DOI}}},\n"
         f"  url    = {{{PAPER_URL}}},\n"
         "  note   = {Preprint; all results are from a synthetic benchmark}\n"
         "}"
