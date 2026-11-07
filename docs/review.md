@@ -34,5 +34,5 @@ a ground-truth simulation benchmark for Northeast Thailand.*  Recommendation to 
 - LaTeX compiles without errors; 0 undefined references or citations.
 - Leakage tests: 6/6 pass (including tests that deliberately leaky variants are detected).
 - Abstract about 230 words.
-- Automatic text-overlap check (`figcheck.py`) on all 10 figures: no overlapping text elements
+- Automatic text-overlap check (`src/isanrice/figcheck.py`) on all 10 figures: no overlapping text elements
   (`results/figure_text_check.json`); legends and annotations re-placed and checked visually.

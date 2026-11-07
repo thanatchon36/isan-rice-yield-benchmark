@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 from matplotlib.path import Path as MplPath
 
-import config as C
+from . import config as C
 
 REGION_OUTLINE = np.array([
     (101.3, 17.6), (101.8, 18.1), (102.1, 17.9), (102.7, 17.9), (103.4, 18.4),

@@ -1,15 +1,11 @@
-"""Leakage, shape and determinism tests:  python -m pytest -q tests/"""
-import pathlib
-import sys
-
+"""Leakage, shape and determinism tests:  make test"""
 import numpy as np
 import pandas as pd
 import pytest
 
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
-import config as C  # noqa: E402
-from features import build_features, feature_list  # noqa: E402
-from simulate import COMPONENTS, simulate  # noqa: E402
+from isanrice import config as C
+from isanrice.features import build_features, feature_list
+from isanrice.simulate import COMPONENTS, simulate
 
 T0 = 2016
 PRICES = ["rice", "cassava", "sugarcane", "maize", "urea"]

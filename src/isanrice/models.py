@@ -10,7 +10,7 @@ from sklearn.neural_network import MLPRegressor
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-import config as C
+from . import config as C
 
 LGB_BASE = dict(n_estimators=500, learning_rate=0.03, num_leaves=15, min_child_samples=20, subsample=0.8,
                 subsample_freq=1, colsample_bytree=0.7, reg_lambda=1.0, max_depth=-1, n_jobs=1, verbose=-1)

@@ -1,7 +1,7 @@
 """Experiments E1-E7. Each caches its outputs in results/ and is skipped once done.
-    python experiments.py                  # everything
-    python experiments.py --only e3 --force
-    python experiments.py --quick          # smoke test, tiny settings -> results_quick/
+    python -m isanrice.cli experiments                  # everything (make experiments)
+    python -m isanrice.cli experiments --only e3 --force
+    python -m isanrice.cli experiments --quick          # smoke test, tiny settings -> results_quick/
 """
 import argparse
 import json
@@ -12,10 +12,10 @@ import warnings
 import numpy as np
 import pandas as pd
 
-import config as C
-import evaluation as E
-from features import build_features, feature_list, load_raw
-from simulate import COMPONENTS, OBSERVED_BY, simulate
+from . import config as C
+from . import evaluation as E
+from .features import build_features, feature_list, load_raw
+from .simulate import COMPONENTS, OBSERVED_BY, simulate
 
 warnings.filterwarnings("ignore")
 T0, Y = time.time(), C.YIELD_COL
@@ -203,12 +203,12 @@ def e7(ctx):
     ctx["e7_complete"] = len(todo) <= max_new
 
 
-def main():
-    ap = argparse.ArgumentParser()
+def main(argv=None):
+    ap = argparse.ArgumentParser(prog="isanrice experiments")
     ap.add_argument("--only", nargs="*", default=["e1", "e2", "e3", "e4", "e5", "e6", "e7"])
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--quick", action="store_true")
-    a = ap.parse_args()
+    a = ap.parse_args(argv)
     S = settings(a.quick)
     out = S["out"]
     out.mkdir(parents=True, exist_ok=True)

@@ -12,11 +12,11 @@ from sklearn.linear_model import Ridge
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-import config as C
-import evaluation as E
-from features import build_features, feature_list, load_raw
-from models import make_model
-from simulate import COMPONENTS, OBSERVED_BY
+from . import config as C
+from . import evaluation as E
+from .features import build_features, feature_list, load_raw
+from .models import make_model
+from .simulate import COMPONENTS, OBSERVED_BY
 
 warnings.filterwarnings("ignore")
 R, Y, ALPHAS = C.RESULTS, C.YIELD_COL, np.logspace(-2, 3, 30)   # same grid as RidgeCV in models.py

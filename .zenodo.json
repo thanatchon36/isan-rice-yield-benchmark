@@ -1,0 +1,35 @@
+{
+  "title": "isan-rice-yield-benchmark",
+  "upload_type": "software",
+  "description": "Process-informed simulation benchmark of main-season rice in 200 districts of Northeast Thailand over 18 seasons (2008-2025) that stores the true yield components, with a leakage-safe rolling-origin forecasting pipeline: 81 features in eight groups (history, moisture, water, climate, satellite, prices, geography, maps), eight learners, a leakage audit, feature-group ablation, ground-truth recovery of grouped SHAP, in-season forecasting, conformal intervals and robustness over replicate worlds and scenarios. Companion software to the preprint \"Leakage-safe, explainable multi-source machine learning for district-level rice yield forecasting: a ground-truth simulation benchmark for Northeast Thailand\". All data are synthetic.",
+  "creators": [
+    {
+      "name": "Chongmankhong, Thanatchon"
+    }
+  ],
+  "license": "mit",
+  "keywords": [
+    "rice",
+    "crop yield forecasting",
+    "Thailand",
+    "remote sensing",
+    "data leakage",
+    "explainable AI",
+    "conformal prediction",
+    "simulation"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://thanatchon36.github.io/isan-rice-yield-benchmark/paper/",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-preprint",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://huggingface.co/datasets/thanatchon36/isan-rice-yield-benchmark",
+      "relation": "isSupplementedBy",
+      "resource_type": "dataset",
+      "scheme": "url"
+    }
+  ]
+}

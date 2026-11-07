@@ -3,14 +3,14 @@
 NOT executed in the demo (it needs your own Earth Engine account):
     pip install earthengine-api pandas
     earthengine authenticate
-    python gee_extract.py --project YOUR_GCP_PROJECT --asset projects/YOUR_GCP_PROJECT/assets/districts
+    python scripts/gee_extract.py --project YOUR_GCP_PROJECT --asset projects/YOUR_GCP_PROJECT/assets/districts
 
 Exports to Google Drive (folder 'crop_yield_gee'):
     gee_monthly_<year>.csv : district_id, year, month, ndvi, evi, lswi, lst_c,
                              rain_mm, tmean_c, tmax_c, rh_pct, soil_moist
     gee_static.csv         : district_id, elevation_m, slope_deg
 Download them, then split into the pipeline's schema:
-    python gee_extract.py --split gee_monthly_*.csv
+    python scripts/gee_extract.py --split gee_monthly_*.csv
     -> data/raw/satellite_monthly.csv and data/raw/climate_monthly.csv
 
 Datasets (check IDs / band names in the Earth Engine catalog before a long run):

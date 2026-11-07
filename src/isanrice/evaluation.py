@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-import config as C
-from models import LGB_BASE, LGB_SPACE, PanelFE, make_model
+from . import config as C
+from .models import LGB_BASE, LGB_SPACE, PanelFE, make_model
 
 Y = C.YIELD_COL
 

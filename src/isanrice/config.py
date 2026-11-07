@@ -1,7 +1,7 @@
 """Central configuration of the benchmark study (edit here to adapt crop / region / design)."""
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]  # repository root (src/isanrice/config.py)
 DATA_RAW = ROOT / "data" / "raw"
 RESULTS = ROOT / "results"
 FIGS = ROOT / "paper" / "figures"

@@ -14,3 +14,8 @@ paper/main.pdf
 data/external/
 arxiv_source.zip
 .pytest_cache/
+.venv/
+build/
+paper/*.xdv
+paper/arxiv/
+paper/arxiv.tar.gz

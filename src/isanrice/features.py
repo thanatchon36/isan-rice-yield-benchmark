@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 
-import config as C
+from . import config as C
 
 KEY = ["district_id", "year"]
 RAW_TABLES = ["districts", "climate_monthly", "satellite_monthly", "reservoir_annual", "prices_annual", "yields"]

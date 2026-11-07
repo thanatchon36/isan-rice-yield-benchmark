@@ -14,10 +14,10 @@ from matplotlib.colors import Normalize
 from matplotlib.ticker import NullFormatter, ScalarFormatter
 from matplotlib.patches import FancyBboxPatch, Polygon as MplPolygon, Rectangle
 
-import config as C
-from figcheck import text_overlaps
+from . import config as C
+from .figcheck import text_overlaps
 from matplotlib.lines import Line2D
-from simulate import COMPONENTS, OBSERVED_BY, PARAMS, REGION_OUTLINE, RIVERS, SUGAR_MILLS, TOWNS
+from .simulate import COMPONENTS, OBSERVED_BY, PARAMS, REGION_OUTLINE, RIVERS, SUGAR_MILLS, TOWNS
 
 R, FIG, TAB, Y = C.RESULTS, C.FIGS, C.TABLES, C.YIELD_COL
 GC = C.GROUP_COLORS
@@ -65,11 +65,10 @@ def load():
 
 
 # ------------------------------------------------------------------------------- figures
-def f1_study_area():
+def district_cells(d):
+    """Voronoi cell of each simulated district (rows of districts.csv), clipped to the region outline."""
     from shapely.geometry import MultiPoint, Point, Polygon
     from shapely.ops import voronoi_diagram
-    d = pd.read_csv(C.DATA_RAW / "districts.csv")
-    d["mean_yield"] = d.district_id.map(pd.read_csv(C.DATA_RAW / "yields.csv").groupby("district_id")[Y].mean())
     region, pts = Polygon(REGION_OUTLINE), d[["lon", "lat"]].to_numpy()
     vor = voronoi_diagram(MultiPoint([tuple(p) for p in pts]), envelope=region.buffer(1.0))
     cells = [None] * len(pts)
@@ -78,6 +77,13 @@ def f1_study_area():
             if cells[i] is None and poly.contains(Point(p)):
                 cells[i] = poly.intersection(region)
                 break
+    return cells
+
+
+def f1_study_area():
+    d = pd.read_csv(C.DATA_RAW / "districts.csv")
+    d["mean_yield"] = d.district_id.map(pd.read_csv(C.DATA_RAW / "yields.csv").groupby("district_id")[Y].mean())
+    cells = district_cells(d)
     layers = [("elevation_m", "(a) Elevation (m)", "terrain"), ("rain_normal_mm", "(b) Rainfall normal (mm/yr)", "Blues"),
               ("irrigation_share", "(c) Irrigated share and sugar mills", "PuBu"),
               ("mean_yield", f"(d) Mean yield 2008-2025 ({C.YIELD_UNIT})", "YlGn")]
@@ -568,7 +574,7 @@ def robust_tables(e7, met, e2, e3, main):
 
 
 def t_hparams(best, sel, tune):
-    from models import LGB_SPACE
+    from .models import LGB_SPACE
     body = [f"\\texttt{{{k.replace('_', chr(92) + '_')}}} & {', '.join(str(v) for v in vals)} & {best['params'][k]:g} \\\\"
             for k, vals in LGB_SPACE.items()]
     selrows = " ; ".join(f"{MODEL_LABEL[m]} {r:.1f}" for m, r in zip(sel.model, sel.RMSE))

@@ -1,10 +1,29 @@
 cff-version: 1.2.0
-message: "If you use this software or benchmark, please cite it as below."
-title: "Leakage-safe, explainable multi-source machine learning for district-level rice yield forecasting: a ground-truth simulation benchmark for Northeast Thailand"
+message: "Please cite the paper (preferred-citation); if you use the isanrice pipeline or data, also cite the software."
+title: "isan-rice-yield-benchmark: leakage-safe, explainable rice yield forecasting, a ground-truth simulation benchmark for Northeast Thailand"
+abstract: >-
+  Process-informed simulation benchmark of main-season rice in 200 districts
+  of Northeast Thailand over 18 seasons, storing the true yield components,
+  with a leakage-safe rolling-origin pipeline: 81 features in eight groups,
+  eight learners, a leakage audit, feature-group ablation, ground-truth
+  recovery of grouped SHAP, in-season forecasting, conformal intervals and
+  robustness over replicate worlds and scenarios.
+type: software
 authors:
-  - family-names: "Chongmankhong"
-    given-names: "Thanatchon"
+  - family-names: Chongmankhong
+    given-names: Thanatchon
 version: 0.1.0
 date-released: 2026-11-07
 license: MIT
-repository-code: "https://github.com/<your-user>/isan-rice-yield-benchmark"
+repository-code: "https://github.com/thanatchon36/isan-rice-yield-benchmark"
+url: "https://thanatchon36.github.io/isan-rice-yield-benchmark/paper/"
+keywords: [rice, crop-yield-forecasting, thailand, remote-sensing, data-leakage, explainable-ai, conformal-prediction, simulation]
+preferred-citation:
+  type: generic
+  title: "Leakage-safe, explainable multi-source machine learning for district-level rice yield forecasting: a ground-truth simulation benchmark for Northeast Thailand"
+  authors:
+    - family-names: Chongmankhong
+      given-names: Thanatchon
+  year: 2026
+  url: "https://thanatchon36.github.io/isan-rice-yield-benchmark/paper/"
+  notes: "Preprint; all results are from a synthetic benchmark."
