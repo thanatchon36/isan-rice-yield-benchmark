@@ -1,0 +1,17 @@
+\begin{table}[H]\centering\footnotesize
+\caption{LightGBM random search (15 configurations $\times$ 2 target formulations, scored by rolling origin on 2015--2017) and the selected configuration (target: level). Validation RMSE of the candidate main models (kg\,rai$^{-1}$): Ensemble (LightGBM + Ridge) 26.2 ; Ridge regression 27.4 ; LightGBM 28.1.}\label{tab:hparams}
+\begin{tabular}{@{}llc@{}}
+\toprule
+Hyper-parameter & Search grid & Selected \\
+\midrule
+\texttt{num\_leaves} & 7, 15, 31, 63 & 63 \\
+\texttt{learning\_rate} & 0.01, 0.02, 0.03, 0.05, 0.08 & 0.05 \\
+\texttt{n\_estimators} & 200, 400, 700, 1000 & 400 \\
+\texttt{min\_child\_samples} & 10, 20, 40, 80 & 80 \\
+\texttt{subsample} & 0.6, 0.8, 1.0 & 0.8 \\
+\texttt{colsample\_bytree} & 0.3, 0.5, 0.7, 0.9 & 0.5 \\
+\texttt{reg\_lambda} & 0.0, 1.0, 5.0, 20.0 & 1 \\
+\texttt{max\_depth} & -1, 4, 6, 8 & -1 \\
+\bottomrule
+\end{tabular}
+\end{table}

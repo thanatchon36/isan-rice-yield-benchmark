@@ -1,0 +1,12 @@
+{
+ "fig1_study_area": [],
+ "fig2_workflow": [],
+ "fig3_model_comparison": [],
+ "fig4_error_by_season": [],
+ "fig5_leakage": [],
+ "fig6_attribution": [],
+ "fig7_dependence_vs_truth": [],
+ "fig8_truth_recovery": [],
+ "fig9_leadtime": [],
+ "fig10_conformal": []
+}

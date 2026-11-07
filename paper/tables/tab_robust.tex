@@ -1,0 +1,16 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Robustness: test RMSE (kg\,rai$^{-1}$) in the main world, across ten independently simulated replicate worlds, and in four DGP scenarios (seed 42), with the configuration tuned once in the main world. ``No sat.'': ensemble without satellite features; ``Random CV'': the same ensemble scored with naive random 5-fold cross-validation.}\label{tab:robust}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+World & Climatology & Ridge & LightGBM & Ensemble & No sat. & Random CV \\
+\midrule
+Main world (seed 42) & 47.1 & 37.9 & 27.4 & 29.9 & 56.9 & 23.8 \\
+Replicates, mean $\pm$ s.d. ($n=10$) & 49.4 $\pm$ 2.9 & 44.2 $\pm$ 28.6 & 26.5 $\pm$ 0.5 & 31.8 $\pm$ 11.4 & 38.5 $\pm$ 12.6 & 23.5 $\pm$ 0.4 \\
+\midrule
+Stronger non-linearity & 87.2 & 157.5 & 28.5 & 83.9 & 166.8 & 26.2 \\
+3$\times$ map-layer error & 47.1 & 39.3 & 27.6 & 30.5 & 55.4 & 23.8 \\
+1.7$\times$ cloud contamination & 47.1 & 54.7 & 28.6 & 36.8 & 65.1 & 24.6 \\
+No satellite-only pests & 46.8 & 25.8 & 26.3 & 25.0 & 43.6 & 23.6 \\
+\bottomrule
+\end{tabular}
+\end{table}

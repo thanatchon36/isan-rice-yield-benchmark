@@ -1,0 +1,20 @@
+\begin{table}[t]\centering\footnotesize
+\caption{Ground-truth recovery on the test forecasts. s.d.: standard deviation of the true component (kg\,rai$^{-1}$); $r_{\mathrm{obs}}$: Pearson correlation between the true component and the summed SHAP values of the groups that observe it, for the main model and (post hoc) for LightGBM alone; last column (main model): the single group whose SHAP correlates most strongly (absolute value) with the component.}\label{tab:recovery}
+\begin{tabular}{@{}lcp{3.6cm}ccc@{}}
+\toprule
+True component & s.d. & Observed by & $r_{\mathrm{obs}}$ main & $r_{\mathrm{obs}}$ LightGBM & Best single group ($r$) \\
+\midrule
+Base level & 44.8 & Geography, Map/spatial, History & 0.90 & 0.92 & History (0.90) \\
+Technology trend & 5.0 & History & 0.06 & 0.06 & Prices (-0.55) \\
+Drought & 39.0 & Moisture, Water, Satellite & 0.84 & 0.88 & Satellite (0.79) \\
+Flood & 5.4 & Water, Map/spatial, Satellite & -0.04 & -0.05 & History (-0.11) \\
+Heat stress & 9.5 & Climate & -0.39 & -0.34 & Moisture (0.67) \\
+Humid-season disease & 5.1 & Moisture & -0.25 & 0.00 & Moisture (-0.25) \\
+Salinity $\times$ drought & 0.8 & Geography, Moisture & 0.41 & 0.33 & Satellite (0.36) \\
+Prices \& competition & 14.4 & Prices, Map/spatial & -0.02 & 0.52 & Map/spatial (0.42) \\
+Management (AR(1)) & 17.4 & History, Satellite & 0.14 & 0.14 & Satellite (0.17) \\
+Pest outbreaks & 10.3 & Satellite & 0.16 & 0.16 & Map/spatial (0.22) \\
+Unobservable noise & 15.9 & -- & -- & -- & Climate (0.07) \\
+\bottomrule
+\end{tabular}
+\end{table}

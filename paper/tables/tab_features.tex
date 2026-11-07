@@ -1,0 +1,18 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Feature groups, number of features, content, and the real-data sources that can replace the synthetic inputs without code changes (OAE: Office of Agricultural Economics; DOAE: Department of Agricultural Extension; TMD: Thai Meteorological Department; RID: Royal Irrigation Department; OCSB: Office of the Cane and Sugar Board; LDD: Land Development Department; GISTDA: Geo-Informatics and Space Technology Development Agency).}\label{tab:features}
+\begin{tabularx}{\textwidth}{@{}p{3.3cm}cXp{3.4cm}@{}}
+\toprule
+Group & $n$ & Features & Real-data sources \\
+\midrule
+Previous yields & 5 & lags $t-1$, $t-2$; previous-3-season mean and s.d.; 5-season trend & OAE / DOAE statistics \\
+Humidity \& soil moisture & 12 & RH, VPD, soil-moisture mean and minimum per growth stage & ERA5-Land; SMAP \\
+Water (rain, reservoir, irrigation) & 8 & rain per stage and season; anomaly vs. past; dry months; reservoir storage; irrigation supply & CHIRPS; TMD; RID reservoirs \\
+Climate (temperature, GDD) & 9 & $T_{\mathrm{mean}}$, $T_{\max}$ per stage; GDD; hot months; rainfall normal & ERA5-Land; TMD normals \\
+Satellite (NDVI, EVI, LSWI, LST) & 19 & NDVI/EVI maxima, LSWI/LST means per stage; NDVI peak, area, timing, green-up; clear-sky fraction; anomalies & MODIS MOD13Q1, MOD09A1, MOD11A2; Sentinel-1/2 \\
+Prices (own \& competing crops) & 11 & lag-1 local prices of rice, cassava, sugarcane, maize; ratios; competing-revenue index; rice/urea ratio & OAE farm-gate prices; OCSB cane price \\
+Geography (terrain, soil) & 9 & elevation, slope, sand, SOC, pH, saline share, suitability class, coordinates & SRTM; LDD soil maps; SoilGrids \\
+Map layers \& spatial lags & 8 & distances to river, mill and market; irrigated and paddy share; flood frequency; $k$-NN spatial lags & RID; LDD land use; GISTDA floods; OSM \\
+\midrule Total & 81 & & \\
+\bottomrule
+\end{tabularx}
+\end{table}

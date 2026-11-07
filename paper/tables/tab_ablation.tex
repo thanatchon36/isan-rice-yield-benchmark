@@ -1,0 +1,19 @@
+\begin{table}[H]\centering\scriptsize
+\caption{Drop-one-group ablation: change in test RMSE (\%) when a feature group is removed and the learner re-trained in every fold; brackets: 95\% season-block bootstrap interval. Positive values mean the group is useful. The first row gives the RMSE (kg\,rai$^{-1}$) with all features.}\label{tab:ablation}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Removed group & LightGBM & Ridge & Ensemble \\
+\midrule
+(none: RMSE with all features) & 27.4 & 37.9 & 29.9 \\
+\midrule
+Satellite (NDVI, EVI, LSWI, LST) & +25.0 [+13.0, +41.3] & +153.3 [+12.9, +279.8] & +90.3 [+14.1, +170.6] \\
+Map layers \& spatial lags & +1.6 [-0.5, +3.7] & -22.2 [-67.5, +12.9] & -9.5 [-34.0, +6.9] \\
+Geography (terrain, soil) & +1.1 [-0.7, +2.7] & +30.0 [-0.4, +60.0] & +15.1 [-0.5, +34.3] \\
+Prices (own \& competing crops) & +0.4 [-1.3, +2.2] & -31.4 [-74.4, +0.1] & -13.9 [-37.9, +1.3] \\
+Humidity \& soil moisture & -0.6 [-2.9, +1.8] & -30.4 [-74.4, +1.9] & -14.1 [-39.3, +1.6] \\
+Climate (temperature, GDD) & -0.7 [-2.3, +1.0] & -28.5 [-70.1, +2.3] & -13.2 [-36.0, +1.4] \\
+Water (rain, reservoir, irrigation) & -0.9 [-3.1, +1.0] & -8.3 [-20.3, +3.8] & -4.7 [-13.1, +2.3] \\
+Previous yields & -2.8 [-4.8, -0.7] & -16.3 [-42.4, +6.5] & -8.2 [-22.8, +1.9] \\
+\bottomrule
+\end{tabular}
+\end{table}

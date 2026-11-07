@@ -1,0 +1,22 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Additive yield mechanisms of the benchmark DGP (contributions in kg\,rai$^{-1}$), parameter values used in the base world, and the feature groups that observe each mechanism. $q_i$: soil-quality index; $I_i$: irrigated share; $\bar s$: true soil moisture (JJ: Jun--Jul, SO: Sep--Oct); $S_{it}$: irrigation supply (irrigated share $\times$ reservoir storage); $f_i$: flood frequency; $w_{it}$: Aug--Sep rainfall relative to normal; $\sigma_i$: saline share; $\tilde c_{it}$, $\tilde p_{it}$: standardised competing-revenue and rice/urea indices from lag-1 local prices; $\bar a_t$: regional mean yield anomaly. Scenario variants multiply all threshold terms by 1.8 and add a compound heat--drought penalty (non-linear), triple map-layer measurement error, raise cloud frequency 1.7-fold, or remove pests.}\label{tab:dgp}
+\begin{tabularx}{\textwidth}{@{}p{2.3cm}Xp{3.9cm}p{2.3cm}@{}}
+\toprule
+Mechanism & Contribution to $y_{it}$ & Parameters & Observed by \\
+\midrule
+Base level & $b_i=\beta_0+\beta_q q_i+\beta_I I_i+\sigma_u u_i+\sigma_\eta\eta_i$ & $\beta_0=365$, $\beta_q=30$, $\beta_I=115$, $\sigma_u=18$, $\sigma_\eta=12$ & Geography, map, history \\
+Technology trend & $\tau\,(t-2008)$ & $\tau=2.2$ & History \\
+Establishment drought & $-\gamma_E\max\{0,\theta_E-(\bar s^{JJ}_{it}+\kappa_E S_{it})\}$ & $\gamma_E=1100$, $\theta_E=0.24$, $\kappa_E=0.12$ & Moisture, water, satellite \\
+Late-season drought & $-\gamma_L\max\{0,\theta_L-(\bar s^{SO}_{it}+\kappa_L S_{it})\}$ & $\gamma_L=900$, $\theta_L=0.22$, $\kappa_L=0.1$ & Moisture, water, satellite \\
+Flood & $-\min\{c_F,\ \gamma_F (f_i/0.3)\max(0,w_{it}-\theta_F)\}$ & $\gamma_F=160$, $\theta_F=1.3$, $c_F=150$ & Water, map, satellite \\
+Heat at flowering & $-\gamma_H\sum_{m\in\{9,10\}}\max(0,T^{\max}_{itm}-\theta_H)$ & $\gamma_H=6$, $\theta_H=34$\,$^\circ$C & Climate \\
+Humid-season disease & $-\gamma_D\max(0,\overline{RH}^{AS}_{it}-\theta_D)$ & $\gamma_D=4$, $\theta_D=84$\,\% & Moisture \\
+Salinity $\times$ drought & $-\gamma_S\,\sigma_i\max(0,\theta_S-\bar s^{JJ}_{it})$ & $\gamma_S=250$, $\theta_S=0.26$ & Geography, moisture \\
+Prices \& competition & $-\gamma_C\,\tilde c_{it}(1-I_i)+\gamma_P\,\tilde p_{it}(0.6+I_i)$ & $\gamma_C=12$, $\gamma_P=10$ & Prices, map \\
+Harvest-price feedback & $\ln P^{\mathrm{rice}}_t \leftarrow \ln P^{\mathrm{rice}}_t-\kappa\,\bar a_t/100$ & $\kappa=0.25$ & (price endogeneity) \\
+Management & $m_{it}=\rho\,m_{i,t-1}+\sigma_m\xi_{it}$ & $\rho=0.6$, $\sigma_m=14$ & History, satellite \\
+Pest outbreaks & $-A\exp\{-d_{ic}^2/(2r^2)\}$ in 3 seasons & $A=75$, $r=70$\,km & Satellite only \\
+Noise & $\varepsilon_{it}\sim\mathcal N(0,\sigma_\varepsilon^2)$ & $\sigma_\varepsilon=16$ & None (irreducible) \\
+\bottomrule
+\end{tabularx}
+\end{table}

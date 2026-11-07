@@ -1,0 +1,18 @@
+\begin{table}[t]\centering\scriptsize
+\caption{Out-of-sample accuracy on the test seasons 2018--2025 (rolling origin; 1{,}600 district-season forecasts). RMSE and MAE in kg\,rai$^{-1}$ (multiply by 0.00625 for t\,ha$^{-1}$); brackets: 95\% season-block bootstrap CI. $R^2_{\mathrm{anom}}$: skill on deviations from the previous-3-season mean; Skill: $1-\mathrm{MSE}/\mathrm{MSE}_{\mathrm{clim}}$. $p_{\mathrm{DM}}$: Holm-adjusted Diebold--Mariano (HLN) test against the main model ($^{\star}$).}\label{tab:models}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+Model & RMSE [95\% CI] & MAE & MAPE (\%) & $R^2$ & $R^2_{\mathrm{anom}}$ & Skill & $p_{\mathrm{DM}}$ \\
+\midrule
+LightGBM & 27.4 [26.1, 29.0] & 21.7 & 6.4 & 0.89 & 0.66 & +0.66 & 1.000 \\
+Random forest & 28.2 [26.8, 29.6] & 22.2 & 6.6 & 0.88 & 0.64 & +0.64 & 1.000 \\
+Ensemble (LightGBM + Ridge) $^{\star}$ & 29.9 [24.7, 37.4] & 23.4 & 7.0 & 0.87 & 0.59 & +0.60 & -- \\
+LightGBM (alternative target) & 31.2 [29.0, 33.4] & 24.6 & 7.3 & 0.85 & 0.56 & +0.56 & 1.000 \\
+Multilayer perceptron & 32.2 [30.3, 34.0] & 25.6 & 7.6 & 0.84 & 0.53 & +0.53 & 1.000 \\
+Panel fixed effects & 35.2 [26.8, 46.5] & 27.5 & 7.9 & 0.81 & 0.44 & +0.44 & 1.000 \\
+Ridge regression & 37.9 [25.4, 54.3] & 27.9 & 8.3 & 0.78 & 0.35 & +0.35 & 1.000 \\
+Climatology (3-season mean) & 47.1 [40.6, 53.2] & 37.8 & 11.4 & 0.67 & -0.00 & +0.00 & 0.251 \\
+Persistence & 59.2 [49.3, 69.1] & 48.1 & 14.6 & 0.47 & -0.59 & -0.58 & 0.080 \\
+\bottomrule
+\end{tabular}
+\end{table}

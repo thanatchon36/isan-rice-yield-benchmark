@@ -1,0 +1,69 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=1in,headheight=14pt,headsep=16pt,footskip=26pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{mathptmx}
+\usepackage{courier}
+\usepackage{microtype}
+\usepackage{booktabs,tabularx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[authoryear,round]{natbib}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{enumitem}
+\setlist{nosep}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.8}\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.75}\setcounter{totalnumber}{5}\setcounter{topnumber}{3}
+\graphicspath{{figures/}}
+\newcommand{\kgrai}{kg\,rai$^{-1}$}
+\input{tables/macros}
+\input{tables/macros_map}
+% ---------------------------------------------------------------- arXiv-style preprint layout
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small\itshape Leakage-safe, explainable ML for district-level rice yield forecasting}
+\fancyhead[R]{\small\textsc{A Preprint}}
+\fancyfoot[C]{\small\thepage}
+\makeatletter
+\renewcommand{\maketitle}{\begingroup\centering
+  \vspace*{-6pt}\rule{\linewidth}{1.4pt}\par\vspace{10pt}
+  {\LARGE\bfseries\@title\par}\vspace{8pt}
+  \rule{\linewidth}{0.5pt}\par\vspace{16pt}
+  {\large\@author\par}\vspace{10pt}
+  {\small\@date\par}\vspace{16pt}
+  \endgroup\thispagestyle{plain}}
+\makeatother
+\title{Leakage-safe, explainable multi-source machine learning for district-level rice yield forecasting: a ground-truth simulation benchmark for Northeast Thailand}
+\author{\textbf{Thanatchon Chongmankhong}}
+% add affiliation / e-mail here, e.g. \author{\textbf{Thanatchon Chongmankhong}\\ Affiliation\\ \texttt{e-mail}}
+\date{\textsc{A Preprint} \quad\textperiodcentered\quad \today}
+\begin{document}
+\maketitle
+\begin{abstract}
+\noindent District-level rice yield forecasts support food-security monitoring, disaster relief and crop insurance, yet machine-learning studies combining satellite, weather and economic data rarely quantify evaluation leakage or verify that explanations reflect real mechanisms. We built a process-informed simulation benchmark of main-season rice in \nDistricts{} districts of Northeast Thailand over \nSeasons{} seasons, whose known data-generating process encodes drought, flood, heat, disease, salinity, price and competing-crop effects, persistent management and satellite-only pest outbreaks, and emits cloud-contaminated satellite indices, weather, prices and noisy map layers together with the true yield components. Eight learners were compared under a leakage-safe rolling origin with \nFeatures{} features in eight groups. Multi-source learners reduced the RMSE from \rmseClim{}~\kgrai{} (climatology) to \rmseLGB{} (LightGBM) and \rmseMain{} (the validation-selected LightGBM--Ridge ensemble); Holm-adjusted Diebold--Mariano tests over eight test seasons were not significant, but the gains replicated in ten independent worlds. Random cross-validation understated the error by \gainRandomLGB--\gainRandom\% and concealed catastrophic failures of the linear learner, which a post-hoc analysis traced to row-wise leave-one-out tuning of its penalty. Satellite features were the only group whose removal materially degraded LightGBM (\ablLGBSatellite\%), and their value emerged only from October. Grouped SHAP values recovered strong mechanisms (drought, $r=\recDrought$) but misattributed heat stress to moisture and absorbed the technology trend into prices; a fragile model produced confident but wrong attributions. Rolling conformal 80\% intervals covered \covEighty\% of outcomes. All results concern the synthetic benchmark; code and a real-data pathway are provided.
+\end{abstract}
+\noindent\textbf{\textit{Keywords}}\enspace rice yield forecasting \textperiodcentered{} remote sensing \textperiodcentered{} machine learning \textperiodcentered{} data leakage \textperiodcentered{} explainable AI \textperiodcentered{} conformal prediction \textperiodcentered{} simulation study \textperiodcentered{} Thailand
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/design}
+\input{sections/methods}
+\input{sections/results}
+\input{sections/discussion}
+
+\section*{Data and code availability}
+All code, the simulated data, the saved results and the scripts that regenerate every number, table and figure of this paper are provided in the accompanying repository \texttt{isan-rice-yield-benchmark}; \texttt{python run\_all.py} reproduces the analysis on a single CPU core.
+
+\section*{AI-assistance statement}
+The study design, code, experiments and this manuscript were drafted with the assistance of a large language model (Claude, Anthropic) under the direction of the author, who reviewed the code and results and takes full responsibility for the content. Because the drafting model had no access to bibliographic databases, all references were compiled from memory and must be verified against the original sources before submission.
+
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\appendix
+\counterwithin{table}{section}\counterwithin{figure}{section}
+\input{sections/appendix}
+\end{document}

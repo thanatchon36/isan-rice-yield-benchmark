@@ -1,0 +1,24 @@
+\begin{table}[H]\centering\footnotesize
+\caption{Test RMSE (kg\,rai$^{-1}$) in every replicate world (seeds 1000--1009) and scenario world (seed 42), using the configuration tuned once in the main world. $^{\dagger}$: RMSE more than 1.5 times that of LightGBM in the same world. No sat.: ensemble without satellite features; Random CV: the same ensemble scored by random 5-fold cross-validation.}\label{tab:worlds}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+World & Climatology & Ridge & LightGBM & Ensemble & No sat. & Random CV \\
+\midrule
+Replicate world 1000 & 46.4 & 26.2 & 26.2 & 24.9 & 31.4 & 23.4 \\
+Replicate world 1001 & 48.1 & 26.0 & 25.6 & 24.4 & 31.0 & 23.4 \\
+Replicate world 1002 & 52.4 & 91.7$^{\dagger}$ & 26.4 & 50.3$^{\dagger}$ & 70.2 & 23.3 \\
+Replicate world 1003 & 46.8 & 27.3 & 27.1 & 25.9 & 30.1 & 24.4 \\
+Replicate world 1004 & 49.2 & 29.7 & 26.3 & 25.6 & 38.0 & 23.6 \\
+Replicate world 1005 & 54.2 & 34.3 & 27.1 & 28.4 & 39.2 & 23.5 \\
+Replicate world 1006 & 47.9 & 51.8$^{\dagger}$ & 27.0 & 33.9 & 48.4 & 23.7 \\
+Replicate world 1007 & 53.4 & 28.1 & 26.8 & 24.9 & 29.3 & 23.1 \\
+Replicate world 1008 & 48.1 & 100.7$^{\dagger}$ & 26.2 & 55.2$^{\dagger}$ & 35.6 & 23.1 \\
+Replicate world 1009 & 47.0 & 26.1 & 26.1 & 25.1 & 31.6 & 23.6 \\
+\midrule
+Stronger non-linearity & 87.2 & 157.5$^{\dagger}$ & 28.5 & 83.9$^{\dagger}$ & 166.8 & 26.2 \\
+3$\times$ map-layer error & 47.1 & 39.3 & 27.6 & 30.5 & 55.4 & 23.8 \\
+1.7$\times$ cloud contamination & 47.1 & 54.7$^{\dagger}$ & 28.6 & 36.8 & 65.1 & 24.6 \\
+No satellite-only pests & 46.8 & 25.8 & 26.3 & 25.0 & 43.6 & 23.6 \\
+\bottomrule
+\end{tabular}
+\end{table}

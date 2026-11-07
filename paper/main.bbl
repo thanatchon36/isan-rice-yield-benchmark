@@ -1,0 +1,399 @@
+\begin{thebibliography}{59}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aas et~al.(2021)Aas, Jullum, and L{\o}land]{aas2021explaining}
+Kjersti Aas, Martin Jullum, and Anders L{\o}land.
+\newblock Explaining individual predictions when features are dependent: More
+  accurate approximations to {S}hapley values.
+\newblock \emph{Artificial Intelligence}, 298, 2021.
+
+\bibitem[Basso and Liu(2019)]{basso2019seasonal}
+Bruno Basso and Lin Liu.
+\newblock Seasonal crop yield forecast: Methods, applications, and accuracies.
+\newblock \emph{Advances in Agronomy}, 154:\penalty0 201--255, 2019.
+
+\bibitem[Becker-Reshef et~al.(2010)Becker-Reshef, Vermote, Lindeman, and
+  Justice]{becker2010generalized}
+I.~Becker-Reshef, E.~Vermote, M.~Lindeman, and C.~Justice.
+\newblock A generalized regression-based model for forecasting winter wheat
+  yields in {K}ansas and {U}kraine using {MODIS} data.
+\newblock \emph{Remote Sensing of Environment}, 114\penalty0 (6):\penalty0
+  1312--1323, 2010.
+
+\bibitem[Bergmeir and Ben{\'i}tez(2012)]{bergmeir2012use}
+Christoph Bergmeir and Jos{\'e}~M. Ben{\'i}tez.
+\newblock On the use of cross-validation for time series predictor evaluation.
+\newblock \emph{Information Sciences}, 191:\penalty0 192--213, 2012.
+
+\bibitem[Breiman(2001)]{breiman2001random}
+Leo Breiman.
+\newblock Random forests.
+\newblock \emph{Machine Learning}, 45\penalty0 (1):\penalty0 5--32, 2001.
+
+\bibitem[Burke and Lobell(2017)]{burke2017satellite}
+Marshall Burke and David~B. Lobell.
+\newblock Satellite-based assessment of yield variation and its determinants in
+  smallholder {A}frican systems.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 114\penalty0
+  (9):\penalty0 2189--2194, 2017.
+
+\bibitem[Cai et~al.(2019)Cai, Guan, Lobell, Potgieter, Wang, Peng, Xu, Asseng,
+  Zhang, You, and Peng]{cai2019integrating}
+Yaping Cai, Kaiyu Guan, David Lobell, Andries~B. Potgieter, Shaowen Wang, Jian
+  Peng, Tianfang Xu, Senthold Asseng, Yongguang Zhang, Liangzhi You, and Bin
+  Peng.
+\newblock Integrating satellite and climate data to predict wheat yield in
+  {A}ustralia using machine learning approaches.
+\newblock \emph{Agricultural and Forest Meteorology}, 274:\penalty0 144--159,
+  2019.
+
+\bibitem[Diebold and Mariano(1995)]{diebold1995comparing}
+Francis~X. Diebold and Roberto~S. Mariano.
+\newblock Comparing predictive accuracy.
+\newblock \emph{Journal of Business \& Economic Statistics}, 13\penalty0
+  (3):\penalty0 253--263, 1995.
+
+\bibitem[Efron and Tibshirani(1993)]{efron1993introduction}
+Bradley Efron and Robert~J. Tibshirani.
+\newblock \emph{An Introduction to the Bootstrap}.
+\newblock Chapman \& Hall, 1993.
+
+\bibitem[Friedman(2001)]{friedman2001greedy}
+Jerome~H. Friedman.
+\newblock Greedy function approximation: A gradient boosting machine.
+\newblock \emph{Annals of Statistics}, 29\penalty0 (5):\penalty0 1189--1232,
+  2001.
+
+\bibitem[Funk et~al.(2015)Funk, Peterson, Landsfeld, Pedreros, Verdin, Shukla,
+  Husak, Rowland, Harrison, Hoell, and Michaelsen]{funk2015climate}
+Chris Funk, Pete Peterson, Martin Landsfeld, Diego Pedreros, James Verdin,
+  Shraddhanand Shukla, Gregory Husak, James Rowland, Laura Harrison, Andrew
+  Hoell, and Joel Michaelsen.
+\newblock The climate hazards infrared precipitation with stations---a new
+  environmental record for monitoring extremes.
+\newblock \emph{Scientific Data}, 2, 2015.
+
+\bibitem[Gao(1996)]{gao1996ndwi}
+Bo-Cai Gao.
+\newblock {NDWI}---a normalized difference water index for remote sensing of
+  vegetation liquid water from space.
+\newblock \emph{Remote Sensing of Environment}, 58\penalty0 (3):\penalty0
+  257--266, 1996.
+
+\bibitem[Gibbs and Cand{\`e}s(2021)]{gibbs2021adaptive}
+Isaac Gibbs and Emmanuel Cand{\`e}s.
+\newblock Adaptive conformal inference under distribution shift.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~34, 2021.
+
+\bibitem[Gorelick et~al.(2017)Gorelick, Hancher, Dixon, Ilyushchenko, Thau, and
+  Moore]{gorelick2017google}
+Noel Gorelick, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, and
+  Rebecca Moore.
+\newblock Google {E}arth {E}ngine: Planetary-scale geospatial analysis for
+  everyone.
+\newblock \emph{Remote Sensing of Environment}, 202:\penalty0 18--27, 2017.
+
+\bibitem[Grinsztajn et~al.(2022)Grinsztajn, Oyallon, and
+  Varoquaux]{grinsztajn2022why}
+L{\'e}o Grinsztajn, Edouard Oyallon, and Ga{\"e}l Varoquaux.
+\newblock Why do tree-based models still outperform deep learning on typical
+  tabular data?
+\newblock In \emph{Advances in Neural Information Processing Systems (Datasets
+  and Benchmarks Track)}, volume~35, 2022.
+
+\bibitem[Harvey et~al.(1997)Harvey, Leybourne, and Newbold]{harvey1997testing}
+David Harvey, Stephen Leybourne, and Paul Newbold.
+\newblock Testing the equality of prediction mean squared errors.
+\newblock \emph{International Journal of Forecasting}, 13\penalty0
+  (2):\penalty0 281--291, 1997.
+
+\bibitem[Hoerl and Kennard(1970)]{hoerl1970ridge}
+Arthur~E. Hoerl and Robert~W. Kennard.
+\newblock Ridge regression: Biased estimation for nonorthogonal problems.
+\newblock \emph{Technometrics}, 12\penalty0 (1):\penalty0 55--67, 1970.
+
+\bibitem[Holm(1979)]{holm1979simple}
+Sture Holm.
+\newblock A simple sequentially rejective multiple test procedure.
+\newblock \emph{Scandinavian Journal of Statistics}, 6\penalty0 (2):\penalty0
+  65--70, 1979.
+
+\bibitem[Holzworth et~al.(2014)]{holzworth2014apsim}
+Dean~P. Holzworth et~al.
+\newblock {APSIM} -- evolution towards a new generation of agricultural systems
+  simulation.
+\newblock \emph{Environmental Modelling \& Software}, 62:\penalty0 327--350,
+  2014.
+
+\bibitem[Hooker et~al.(2021)Hooker, Mentch, and Zhou]{hooker2021unrestricted}
+Giles Hooker, Lucas Mentch, and Siyu Zhou.
+\newblock Unrestricted permutation forces extrapolation: Variable importance
+  requires at least one more model, or there is no free variable importance.
+\newblock \emph{Statistics and Computing}, 31, 2021.
+
+\bibitem[Huete et~al.(2002)Huete, Didan, Miura, Rodriguez, Gao, and
+  Ferreira]{huete2002overview}
+A.~Huete, K.~Didan, T.~Miura, E.~P. Rodriguez, X.~Gao, and L.~G. Ferreira.
+\newblock Overview of the radiometric and biophysical performance of the
+  {MODIS} vegetation indices.
+\newblock \emph{Remote Sensing of Environment}, 83\penalty0 (1--2):\penalty0
+  195--213, 2002.
+
+\bibitem[Hyndman and Athanasopoulos(2021)]{hyndman2021forecasting}
+Rob~J. Hyndman and George Athanasopoulos.
+\newblock \emph{Forecasting: Principles and Practice}.
+\newblock OTexts, 3rd edition, 2021.
+
+\bibitem[Jeong et~al.(2016)Jeong, Resop, Mueller, Fleisher, Yun, Butler,
+  Timlin, Shim, Gerber, Reddy, and Kim]{jeong2016random}
+Jig~Han Jeong, Jonathan~P. Resop, Nathaniel~D. Mueller, David~H. Fleisher,
+  Kyungdahm Yun, Ethan~E. Butler, Dennis~J. Timlin, Kyo-Moon Shim, James~S.
+  Gerber, Vangimalla~R. Reddy, and Soo-Hyung Kim.
+\newblock Random forests for global and regional crop yield predictions.
+\newblock \emph{PLoS ONE}, 11\penalty0 (6), 2016.
+
+\bibitem[Johnson(2014)]{johnson2014assessment}
+David~M. Johnson.
+\newblock An assessment of pre- and within-season remotely sensed variables for
+  forecasting corn and soybean yields in the {U}nited {S}tates.
+\newblock \emph{Remote Sensing of Environment}, 141:\penalty0 116--128, 2014.
+
+\bibitem[Jones et~al.(2003)Jones, Hoogenboom, Porter, Boote, Batchelor, Hunt,
+  Wilkens, Singh, Gijsman, and Ritchie]{jones2003dssat}
+J.~W. Jones, G.~Hoogenboom, C.~H. Porter, K.~J. Boote, W.~D. Batchelor, L.~A.
+  Hunt, P.~W. Wilkens, U.~Singh, A.~J. Gijsman, and J.~T. Ritchie.
+\newblock The {DSSAT} cropping system model.
+\newblock \emph{European Journal of Agronomy}, 18\penalty0 (3--4):\penalty0
+  235--265, 2003.
+
+\bibitem[Kapoor and Narayanan(2023)]{kapoor2023leakage}
+Sayash Kapoor and Arvind Narayanan.
+\newblock Leakage and the reproducibility crisis in machine-learning-based
+  science.
+\newblock \emph{Patterns}, 4\penalty0 (9), 2023.
+
+\bibitem[Kaufman et~al.(2012)Kaufman, Rosset, Perlich, and
+  Stitelman]{kaufman2012leakage}
+Shachar Kaufman, Saharon Rosset, Claudia Perlich, and Ori Stitelman.
+\newblock Leakage in data mining: Formulation, detection, and avoidance.
+\newblock \emph{ACM Transactions on Knowledge Discovery from Data}, 6\penalty0
+  (4), 2012.
+
+\bibitem[Ke et~al.(2017)Ke, Meng, Finley, Wang, Chen, Ma, Ye, and
+  Liu]{ke2017lightgbm}
+Guolin Ke, Qi~Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei
+  Ye, and Tie-Yan Liu.
+\newblock {LightGBM}: A highly efficient gradient boosting decision tree.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~30, 2017.
+
+\bibitem[Khaki and Wang(2019)]{khaki2019crop}
+Saeed Khaki and Lizhi Wang.
+\newblock Crop yield prediction using deep neural networks.
+\newblock \emph{Frontiers in Plant Science}, 10, 2019.
+
+\bibitem[K{\"u}nsch(1989)]{kunsch1989jackknife}
+Hans~R. K{\"u}nsch.
+\newblock The jackknife and the bootstrap for general stationary observations.
+\newblock \emph{Annals of Statistics}, 17\penalty0 (3):\penalty0 1217--1241,
+  1989.
+
+\bibitem[Lei et~al.(2018)Lei, G'Sell, Rinaldo, Tibshirani, and
+  Wasserman]{lei2018distribution}
+Jing Lei, Max G'Sell, Alessandro Rinaldo, Ryan~J. Tibshirani, and Larry
+  Wasserman.
+\newblock Distribution-free predictive inference for regression.
+\newblock \emph{Journal of the American Statistical Association}, 113\penalty0
+  (523):\penalty0 1094--1111, 2018.
+
+\bibitem[Lesk et~al.(2016)Lesk, Rowhani, and Ramankutty]{lesk2016influence}
+Corey Lesk, Pedram Rowhani, and Navin Ramankutty.
+\newblock Influence of extreme weather disasters on global crop production.
+\newblock \emph{Nature}, 529\penalty0 (7584):\penalty0 84--87, 2016.
+
+\bibitem[Lobell and Burke(2010)]{lobell2010use}
+David~B. Lobell and Marshall~B. Burke.
+\newblock On the use of statistical models to predict crop yield responses to
+  climate change.
+\newblock \emph{Agricultural and Forest Meteorology}, 150\penalty0
+  (11):\penalty0 1443--1452, 2010.
+
+\bibitem[Lobell et~al.(2011)Lobell, Schlenker, and
+  Costa-Roberts]{lobell2011climate}
+David~B. Lobell, Wolfram Schlenker, and Justin Costa-Roberts.
+\newblock Climate trends and global crop production since 1980.
+\newblock \emph{Science}, 333\penalty0 (6042):\penalty0 616--620, 2011.
+
+\bibitem[Lobell et~al.(2015)Lobell, Thau, Seifert, Engle, and
+  Little]{lobell2015scalable}
+David~B. Lobell, David Thau, Christopher Seifert, Eric Engle, and Bertis
+  Little.
+\newblock A scalable satellite-based crop yield mapper.
+\newblock \emph{Remote Sensing of Environment}, 164:\penalty0 324--333, 2015.
+
+\bibitem[Lundberg and Lee(2017)]{lundberg2017unified}
+Scott~M. Lundberg and Su-In Lee.
+\newblock A unified approach to interpreting model predictions.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~30, 2017.
+
+\bibitem[Lundberg et~al.(2020)Lundberg, Erion, Chen, DeGrave, Prutkin, Nair,
+  Katz, Himmelfarb, Bansal, and Lee]{lundberg2020local}
+Scott~M. Lundberg, Gabriel Erion, Hugh Chen, Alex DeGrave, Jordan~M. Prutkin,
+  Bala Nair, Ronit Katz, Jonathan Himmelfarb, Nisha Bansal, and Su-In Lee.
+\newblock From local explanations to global understanding with explainable {AI}
+  for trees.
+\newblock \emph{Nature Machine Intelligence}, 2\penalty0 (1):\penalty0 56--67,
+  2020.
+
+\bibitem[Molnar(2022)]{molnar2022interpretable}
+Christoph Molnar.
+\newblock \emph{Interpretable Machine Learning}.
+\newblock Independently published, 2nd edition, 2022.
+
+\bibitem[Morris et~al.(2019)Morris, White, and Crowther]{morris2019using}
+Tim~P. Morris, Ian~R. White, and Michael~J. Crowther.
+\newblock Using simulation studies to evaluate statistical methods.
+\newblock \emph{Statistics in Medicine}, 38\penalty0 (11):\penalty0 2074--2102,
+  2019.
+
+\bibitem[Mu{\~n}oz-Sabater et~al.(2021)]{munozsabater2021era5}
+Joaqu{\'i}n Mu{\~n}oz-Sabater et~al.
+\newblock {ERA5-Land}: A state-of-the-art global reanalysis dataset for land
+  applications.
+\newblock \emph{Earth System Science Data}, 13\penalty0 (9):\penalty0
+  4349--4383, 2021.
+
+\bibitem[{Natural Earth}(2026)]{naturalearth}
+{Natural Earth}.
+\newblock Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales.
+\newblock \url{https://www.naturalearthdata.com}, 2026.
+\newblock Public domain; GeoJSON files accessed 7 November 2026.
+
+\bibitem[Nerlove(1956)]{nerlove1956estimates}
+Marc Nerlove.
+\newblock Estimates of the elasticities of supply of selected agricultural
+  commodities.
+\newblock \emph{Journal of Farm Economics}, 38\penalty0 (2):\penalty0 496--509,
+  1956.
+
+\bibitem[Pedregosa et~al.(2011)]{pedregosa2011scikit}
+Fabian Pedregosa et~al.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock \emph{Journal of Machine Learning Research}, 12:\penalty0 2825--2830,
+  2011.
+
+\bibitem[Ray et~al.(2015)Ray, Gerber, MacDonald, and West]{ray2015climate}
+Deepak~K. Ray, James~S. Gerber, Graham~K. MacDonald, and Paul~C. West.
+\newblock Climate variation explains a third of global crop yield variability.
+\newblock \emph{Nature Communications}, 6, 2015.
+
+\bibitem[Rigden et~al.(2020)Rigden, Mueller, Holbrook, Pillai, and
+  Huybers]{rigden2020combined}
+Angela~J. Rigden, Nathaniel~D. Mueller, N.~Michele Holbrook, Neel Pillai, and
+  Peter Huybers.
+\newblock Combined influence of soil moisture and atmospheric evaporative
+  demand is important for accurately predicting {US} maize yields.
+\newblock \emph{Nature Food}, 1\penalty0 (2):\penalty0 127--133, 2020.
+
+\bibitem[Roberts et~al.(2017)Roberts, Bahn, Ciuti, Boyce, Elith,
+  Guillera-Arroita, Hauenstein, Lahoz-Monfort, Schr{\"o}der, Thuiller, Warton,
+  Wintle, Hartig, and Dormann]{roberts2017cross}
+David~R. Roberts, Volker Bahn, Simone Ciuti, Mark~S. Boyce, Jane Elith,
+  Gurutzeta Guillera-Arroita, Severin Hauenstein, Jos{\'e}~J. Lahoz-Monfort,
+  Boris Schr{\"o}der, Wilfried Thuiller, David~I. Warton, Brendan~A. Wintle,
+  Florian Hartig, and Carsten~F. Dormann.
+\newblock Cross-validation strategies for data with temporal, spatial,
+  hierarchical, or phylogenetic structure.
+\newblock \emph{Ecography}, 40\penalty0 (8):\penalty0 913--929, 2017.
+
+\bibitem[Romano et~al.(2019)Romano, Patterson, and
+  Cand{\`e}s]{romano2019conformalized}
+Yaniv Romano, Evan Patterson, and Emmanuel Cand{\`e}s.
+\newblock Conformalized quantile regression.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~32, 2019.
+
+\bibitem[Ropelewski and Halpert(1987)]{ropelewski1987global}
+C.~F. Ropelewski and M.~S. Halpert.
+\newblock Global and regional scale precipitation patterns associated with the
+  {E}l {N}i{\~n}o/{S}outhern {O}scillation.
+\newblock \emph{Monthly Weather Review}, 115\penalty0 (8):\penalty0 1606--1626,
+  1987.
+
+\bibitem[Schlenker and Roberts(2009)]{schlenker2009nonlinear}
+Wolfram Schlenker and Michael~J. Roberts.
+\newblock Nonlinear temperature effects indicate severe damages to {U.S.} crop
+  yields under climate change.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 106\penalty0
+  (37):\penalty0 15594--15598, 2009.
+
+\bibitem[Shwartz-Ziv and Armon(2022)]{shwartz2022tabular}
+Ravid Shwartz-Ziv and Amitai Armon.
+\newblock Tabular data: Deep learning is not all you need.
+\newblock \emph{Information Fusion}, 81:\penalty0 84--90, 2022.
+
+\bibitem[Tashman(2000)]{tashman2000out}
+Leonard~J. Tashman.
+\newblock Out-of-sample tests of forecasting accuracy: An analysis and review.
+\newblock \emph{International Journal of Forecasting}, 16\penalty0
+  (4):\penalty0 437--450, 2000.
+
+\bibitem[Tucker(1979)]{tucker1979red}
+Compton~J. Tucker.
+\newblock Red and photographic infrared linear combinations for monitoring
+  vegetation.
+\newblock \emph{Remote Sensing of Environment}, 8\penalty0 (2):\penalty0
+  127--150, 1979.
+
+\bibitem[van Klompenburg et~al.(2020)van Klompenburg, Kassahun, and
+  Catal]{vanklompenburg2020crop}
+Thomas van Klompenburg, Ayalew Kassahun, and Cagatay Catal.
+\newblock Crop yield prediction using machine learning: A systematic literature
+  review.
+\newblock \emph{Computers and Electronics in Agriculture}, 177, 2020.
+
+\bibitem[Vovk et~al.(2005)Vovk, Gammerman, and Shafer]{vovk2005algorithmic}
+Vladimir Vovk, Alexander Gammerman, and Glenn Shafer.
+\newblock \emph{Algorithmic Learning in a Random World}.
+\newblock Springer, 2005.
+
+\bibitem[Wan(2008)]{wan2008new}
+Zhengming Wan.
+\newblock New refinements and validation of the {MODIS} land-surface
+  temperature/emissivity products.
+\newblock \emph{Remote Sensing of Environment}, 112\penalty0 (1):\penalty0
+  59--74, 2008.
+
+\bibitem[Wolpert(1992)]{wolpert1992stacked}
+David~H. Wolpert.
+\newblock Stacked generalization.
+\newblock \emph{Neural Networks}, 5\penalty0 (2):\penalty0 241--259, 1992.
+
+\bibitem[Wooldridge(2010)]{wooldridge2010econometric}
+Jeffrey~M. Wooldridge.
+\newblock \emph{Econometric Analysis of Cross Section and Panel Data}.
+\newblock MIT Press, 2nd edition, 2010.
+
+\bibitem[Xiao et~al.(2005)Xiao, Boles, Liu, Zhuang, Frolking, Li, Salas, and
+  Moore]{xiao2005mapping}
+Xiangming Xiao, Stephen Boles, Jiyuan Liu, Dafang Zhuang, Steve Frolking,
+  Changsheng Li, William Salas, and Berrien Moore.
+\newblock Mapping paddy rice agriculture in southern {C}hina using
+  multi-temporal {MODIS} images.
+\newblock \emph{Remote Sensing of Environment}, 95\penalty0 (4):\penalty0
+  480--492, 2005.
+
+\bibitem[You et~al.(2017)You, Li, Low, Lobell, and Ermon]{you2017deep}
+Jiaxuan You, Xiaocheng Li, Melvin Low, David Lobell, and Stefano Ermon.
+\newblock Deep {G}aussian process for crop yield prediction based on remote
+  sensing data.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, 2017.
+
+\end{thebibliography}

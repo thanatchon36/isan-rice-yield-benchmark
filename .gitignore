@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+results_quick/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/main.pdf
+.DS_Store
+data/external/
+arxiv_source.zip
+.pytest_cache/
