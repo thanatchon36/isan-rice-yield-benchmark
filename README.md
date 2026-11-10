@@ -87,6 +87,52 @@ Outputs: `results/` (metrics, predictions, ablations, SHAP recovery, conformal c
 | Explanations | SHAP recovers drought (r = 0.84) but misattributes heat and absorbs the trend into prices |
 | Uncertainty | 80% conformal intervals cover 78.3% of outcomes |
 
+## Pretrained model
+
+🧠 **[`thanatchon36/isan-rice-yield-benchmark`](https://huggingface.co/thanatchon36/isan-rice-yield-benchmark) on
+Hugging Face**: the paper's main model, the LightGBM + Ridge ensemble selected on the validation seasons, refitted
+on every season with features (2011-2025, 3,000 district-seasons) with the tuned hyperparameters. It forecasts a
+district's main-season rice yield (kg/rai) from the 81 end-of-season features.
+
+> **Trained on synthetic data.** The model has learned the simulated Isan, not Thailand: use it to explore the
+> pipeline, not to forecast real yields. For real data, rebuild the features and retrain (`make all`, `make model`).
+
+| file | content |
+|---|---|
+| `lightgbm.txt` | LightGBM booster in its native text format |
+| `ridge.json` | Ridge as numbers: imputation medians, scaler, penalty, coefficients, intercept |
+| `conformal.json` | 80% / 90% split-conformal offsets from 2,400 out-of-sample forecasts (2014-2025) |
+| `features.json` | the 81 input columns in order, with their groups |
+| `predict.py` | loader that needs only numpy, pandas and lightgbm |
+
+No pickle anywhere, so the files are safe to load. `make model` checks that the export reproduces the fitted models
+exactly before it uploads anything.
+
+Test-season accuracy from the paper (rolling origin, 2018-2025, 1,600 forecasts):
+
+| Model | RMSE (kg/rai) [95% CI] | MAE | R² |
+|---|---|---|---|
+| LightGBM + Ridge ensemble (this model) | 29.9 [24.7, 37.4] | 23.4 | 0.87 |
+| LightGBM alone | 27.4 [26.1, 29.0] | 21.7 | 0.89 |
+| Climatology (previous 3-season mean) | 47.1 [40.6, 53.2] | 37.8 | 0.67 |
+
+```python
+from huggingface_hub import snapshot_download
+import sys, pandas as pd
+
+folder = snapshot_download("thanatchon36/isan-rice-yield-benchmark")
+sys.path.insert(0, folder)
+from predict import load
+
+model = load(folder)
+X = pd.read_csv(f"{folder}/sample_input.csv")             # or features from isanrice.features.build_features
+print(model.predict(X)[["lightgbm", "ensemble", "lo80", "hi80"]].head())
+```
+
+`predict` returns the LightGBM, Ridge and ensemble forecasts and the interval bounds. LightGBM alone had the
+lowest test error, but the ensemble was the model chosen before the test seasons were seen, so it is the main model;
+both are available.
+
 ## Research: *Leakage-safe, explainable multi-source machine learning for district-level rice yield forecasting*
 
 The preprint by Thanatchon Chongmankhong is in [`paper/`](paper/): a PDF in [`paper/paper.pdf`](paper/paper.pdf), its
