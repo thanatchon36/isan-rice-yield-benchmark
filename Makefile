@@ -1,6 +1,6 @@
 PY ?= .venv/bin/python
 
-.PHONY: setup simulate experiments quick diagnostics figures map banner poster paper web arxiv dataset test all clean
+.PHONY: setup simulate experiments quick diagnostics figures map banner poster paper web arxiv dataset model test all clean
 
 setup:          ## create venv and install the package (needs uv)
 	uv venv .venv --python 3.12
@@ -41,6 +41,9 @@ arxiv: paper    ## arXiv source bundle -> paper/arxiv.tar.gz
 
 dataset:        ## stage the Hugging Face dataset -> build/hf_dataset/ (UPLOAD=1 also uploads it)
 	$(PY) scripts/hf_dataset.py $(if $(UPLOAD),--upload,)
+
+model:          ## refit the final models, export and verify them -> build/hf_model/ (UPLOAD=1 also uploads them)
+	$(PY) scripts/hf_model.py $(if $(UPLOAD),--upload,)
 
 test:
 	$(PY) -m pytest -q

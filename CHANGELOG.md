@@ -7,6 +7,11 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- Models on Hugging Face, [`thanatchon36/isan-rice-yield-benchmark`](https://huggingface.co/thanatchon36/isan-rice-yield-benchmark): the main LightGBM + Ridge ensemble
+  refitted on every season with features (2011-2025), exported without pickle (LightGBM text model, Ridge as JSON),
+  80%/90% split-conformal offsets from 2,400 out-of-sample forecasts, a model card with the paper's test metrics and
+  `predict.py`. `scripts/hf_model.py` (`make model`) refits, checks that the export reproduces the fitted models,
+  and uploads.
 - Zenodo archive of every release (concept DOI [10.5281/zenodo.24036674](https://doi.org/10.5281/zenodo.24036674)), cited in the README, `CITATION.cff`,
   the paper, the web reader and the Hugging Face dataset card.
 - LinkedIn launch poster, `docs/assets/linkedin_poster.png` (1440 x 1800), built from `paper/tables/macros.tex` by

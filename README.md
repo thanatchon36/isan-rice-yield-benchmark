@@ -9,13 +9,15 @@
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffe8a3?style=flat-square&labelColor=0b1020" alt="License MIT"></a>
 <a href="https://zenodo.org/badge/latestdoi/1449352537"><img src="https://zenodo.org/badge/1449352537.svg" alt="DOI"></a>
 <a href="https://huggingface.co/datasets/thanatchon36/isan-rice-yield-benchmark"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20dataset-isan--rice--yield--benchmark-f5a623?style=flat-square&labelColor=0b1020" alt="Hugging Face dataset"></a>
+<a href="https://huggingface.co/thanatchon36/isan-rice-yield-benchmark"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20model-isan--rice--yield--benchmark-f5a623?style=flat-square&labelColor=0b1020" alt="Hugging Face model"></a>
 </p>
 
 <p align="center">
 📖 <b><a href="https://thanatchon36.github.io/isan-rice-yield-benchmark/paper/">Read the paper online</a></b> ·
 📄 <b><a href="paper/paper.pdf">Download the PDF</a></b> ·
 🗂️ <b><a href="docs/DATA_SCHEMA.md">Data schema</a></b> ·
-🤗 <b><a href="https://huggingface.co/datasets/thanatchon36/isan-rice-yield-benchmark">Dataset</a></b>
+🤗 <b><a href="https://huggingface.co/datasets/thanatchon36/isan-rice-yield-benchmark">Dataset</a></b> ·
+🧠 <b><a href="https://huggingface.co/thanatchon36/isan-rice-yield-benchmark">Model</a></b>
 </p>
 
 **Leakage-safe, explainable multi-source machine learning for district-level rice yield forecasting: a ground-truth
@@ -51,6 +53,7 @@ Outputs: `results/` (metrics, predictions, ablations, SHAP recovery, conformal c
 | `web` | Web reader only → `docs/paper/index.html`, served at <https://thanatchon36.github.io/isan-rice-yield-benchmark/paper/> |
 | `arxiv` | arXiv source bundle → `paper/arxiv.tar.gz` (prints title, abstract and comments for the form) |
 | `dataset` | Stage the Hugging Face dataset → `build/hf_dataset/` (`UPLOAD=1` also uploads it) |
+| `model` | Refit the final models, export them without pickle and check the export → `build/hf_model/` (`UPLOAD=1` also uploads them) |
 | `banner` | README banner → `docs/assets/banner.png` |
 | `poster` | LinkedIn poster → `docs/assets/linkedin_poster.png` |
 
@@ -95,6 +98,9 @@ checks that the bundle compiles on its own.
 - Tables: [`paper/tables/`](paper/tables/) · Figures: [`paper/figures/`](paper/figures/)
 - Dataset on Hugging Face: [`thanatchon36/isan-rice-yield-benchmark`](https://huggingface.co/datasets/thanatchon36/isan-rice-yield-benchmark),
   with the simulated main world, its true yield components and the experiment results
+- Models on Hugging Face: [`thanatchon36/isan-rice-yield-benchmark`](https://huggingface.co/thanatchon36/isan-rice-yield-benchmark), the main LightGBM + Ridge ensemble refitted
+  on all seasons (LightGBM native format, Ridge as JSON, conformal offsets, a pickle-free `predict.py`), trained on
+  synthetic data and meant for exploring the pipeline, not for forecasting real Thai yields
 
 <p align="center"><img src="paper/figures/fig1_study_area.png" alt="The synthetic study region: elevation, rainfall, irrigation and mean yield of the 200 simulated districts" width="640"></p>
 
@@ -119,6 +125,7 @@ scripts/thailand_map.py     study-area figure (--paper) and standalone maps (Nat
 scripts/gee_extract.py      Google Earth Engine template for real MODIS / CHIRPS / ERA5-Land / SRTM inputs
 scripts/arxiv_bundle.py     arXiv source bundle
 scripts/hf_dataset.py       Hugging Face dataset card + upload
+scripts/hf_model.py         final models: refit, export (no pickle), verify, model card + upload
 scripts/make_banner.py      README banner
 scripts/make_linkedin_poster.py  LinkedIn poster
 data/raw/                   synthetic inputs (same schema as real data)

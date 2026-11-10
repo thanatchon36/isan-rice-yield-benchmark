@@ -74,7 +74,7 @@ forecasting: a ground-truth simulation benchmark for Northeast Thailand* by Than
 Main-season rice in 200 simulated districts of Northeast Thailand (Isan) over 18 seasons, 2008-2025, with drought,
 flood, heat, disease, salinity, price and competing-crop effects, persistent management and satellite-only pest
 outbreaks. Code: <https://github.com/thanatchon36/isan-rice-yield-benchmark>;
-archived on Zenodo: [10.5281/zenodo.24036674](https://doi.org/10.5281/zenodo.24036674).
+models: <https://huggingface.co/thanatchon36/isan-rice-yield-benchmark>; archived on Zenodo: [10.5281/zenodo.24036674](https://doi.org/10.5281/zenodo.24036674).
 
 *Independent personal research. Does not represent the views of any employer or institution.*
 
